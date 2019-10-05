@@ -8,6 +8,8 @@ public class Main {
 	// write your code here
     }
 
-
+    // forward pass  ... store data
+    // backward pass
+    // initialisation --> random weights and creating arrays
     
 }
