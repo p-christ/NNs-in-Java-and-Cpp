@@ -16,7 +16,9 @@ public class Main {
 
         FNN nn = new FNN(layers, learningRate);
 
-        double[][] trainingData = generateRandomTrainingData(rows, cols);
+        double[][] trainingData = nn.generateRandomData(rows, cols);
+
+        nn.initialise();
 
 
 
@@ -27,16 +29,6 @@ public class Main {
     }
 
 
-    public static double[][] generateRandomTrainingData(int rows, int cols){
-
-        double[][] trainingData = new double[rows][cols];
-        for(int i = 0; i < rows; i++){
-            for(int j = 0; j < cols ; j++){
-                trainingData[i][j] = Math.random();
-            }
-        }
-        return trainingData;
-    }
 
 
     // forward pass  ... store data

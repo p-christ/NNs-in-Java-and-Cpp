@@ -7,7 +7,7 @@ public interface NN {
     /**
      * Initialises the weights of the network
      */
-    public void initialise();
+    public ArrayList initialise();
 
     /**
      * Run a full training iteration
