@@ -16,7 +16,7 @@ public class Main {
 
         FNN nn = new FNN(layers, learningRate);
 
-        double[][] trainingData = nn.generateRandomData(rows, cols);
+        double[][] trainingData = nn.generateRandomValues(rows, cols);
 
         nn.initialise();
 

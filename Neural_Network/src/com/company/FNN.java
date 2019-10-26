@@ -20,17 +20,14 @@ public class FNN implements NN {
      */
     @Override
     public ArrayList initialise() {
-
         int row_weights;
         int col_weights;
-
+        double[][] weights;
         ArrayList<double[][]> weightsList = new ArrayList<>();
-
         for (int i = 0; i < layers.size() - 1; i++) {
             row_weights = layers.get(i);
             col_weights = layers.get(i + 1);
-
-            double[][] weights = generateRandomValues(row_weights, col_weights);
+            weights = generateRandomValues(row_weights, col_weights);
             weightsList.add(weights);
         }
 
@@ -39,7 +36,6 @@ public class FNN implements NN {
 
 
     public double[][] generateRandomValues(int rows, int cols){
-
         double[][] values = new double[rows][cols];
         for(int i = 0; i < rows; i++){
             for(int j = 0; j < cols ; j++){
@@ -63,9 +59,38 @@ public class FNN implements NN {
     }
 
     @Override
-    public void forward(ArrayList x){
+    public void forward(double[][] x){
+
 
     }
+
+
+    public double[][] matrixMultiplication(double[][] matrixA, double[][] matrixB){
+
+        int aRows = matrixA.length;
+        int aCols = matrixA[0].length;
+        int bRows = matrixB.length;
+        int bCols = matrixB[0].length;
+
+        double[][] result = new double[aRows][bCols];
+
+        for(int i=0; i < aRows)
+
+
+    }
+
+        //creating another matrix to store the multiplication of two matrices
+        int c[][]=new int[3][3];  //3 rows and 3 columns
+
+//multiplying and printing multiplication of 2 matrices
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                c[i][j]=0;
+                for(int k=0;k<3;k++)
+                {
+
+                }
+
 
     @Override
     public void backward(){

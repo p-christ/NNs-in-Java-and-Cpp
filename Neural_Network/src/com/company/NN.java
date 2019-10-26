@@ -17,7 +17,7 @@ public interface NN {
     /**
      * Runs a forward pass of the network
      */
-    public void forward(ArrayList x);
+    public void forward(double[][] x);
 
     /**
      * Runs a backward pass of the network, updating the parameters
