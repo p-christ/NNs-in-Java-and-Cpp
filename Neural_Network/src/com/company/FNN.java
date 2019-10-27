@@ -74,22 +74,28 @@ public class FNN implements NN {
 
         double[][] result = new double[aRows][bCols];
 
-        for(int i=0; i < aRows)
-
+        for(int i=0; i < aRows; i++){
+            for(int j=0; j < bCols; j++){
+                result[i][j] = 0
+                for(int z=0; z < aCols; z++){
+                    result[i][j] += matrixA[i][z] * matrixB[z][j];
+                }
+            }
+        }
 
     }
 
-        //creating another matrix to store the multiplication of two matrices
-        int c[][]=new int[3][3];  //3 rows and 3 columns
-
-//multiplying and printing multiplication of 2 matrices
-        for(int i=0;i<3;i++){
-            for(int j=0;j<3;j++){
-                c[i][j]=0;
-                for(int k=0;k<3;k++)
-                {
-
-                }
+//        //creating another matrix to store the multiplication of two matrices
+//        int c[][]=new int[3][3];  //3 rows and 3 columns
+//
+////multiplying and printing multiplication of 2 matrices
+//        for(int i=0;i<3;i++){
+//            for(int j=0;j<3;j++){
+//                c[i][j]=0;
+//                for(int k=0;k<3;k++)
+//                {
+//
+//                }
 
 
     @Override
