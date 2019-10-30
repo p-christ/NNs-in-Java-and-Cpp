@@ -1,21 +1,23 @@
-
-
 import static junit.framework.TestCase.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.company.FNN;
 import org.junit.Test;
-import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MyTests {
 
     @Test
-    public void multiplicationOfZeroIntegersShouldReturnZero() {
-//        MyClass tester = new MyClass(); // MyClass is tested
-//
-//        // assert statements
-//        assertEquals(0, tester.multiply(10, 0), "10 x 0 must be 0");
-//        assertEquals(0, tester.multiply(0, 10), "0 x 10 must be 0");
-//        assertEquals(0, tester.multiply(0, 0), "0 x 0 must be 0");
-        assertEquals(0, 0) ;
+    public void matrixMultiplication() {
+
+//        *** TBD ***
+
+        ArrayList<Integer> layers = new ArrayList<>(Arrays.asList(10,10,1));
+        double learningRate = 0.1;
+        int rows = 5;
+        int cols = 8;
+
+        FNN nn = new FNN(layers, learningRate);
     }
 }

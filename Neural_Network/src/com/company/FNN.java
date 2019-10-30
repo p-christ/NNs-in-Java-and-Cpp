@@ -45,19 +45,6 @@ public class FNN implements NN {
         return values;
     }
 
-    /**
-     * Run a full training iteration
-     */
-    @Override
-    public void runTrainingIteration(ArrayList x){
-
-    }
-
-    @Override
-    public void calculate_loss(float y_true, float y_predict){
-
-    }
-
     @Override
     public void forward(double[][] x){
 
@@ -65,9 +52,6 @@ public class FNN implements NN {
             x = matrixMultiplication(x, weights.get(i));
             x = relu(x);
         }
-
-
-
 
     }
 
@@ -87,7 +71,6 @@ public class FNN implements NN {
 
         int aRows = matrixA.length;
         int aCols = matrixA[0].length;
-        int bRows = matrixB.length;
         int bCols = matrixB[0].length;
 
         double[][] result = new double[aRows][bCols];
@@ -100,12 +83,24 @@ public class FNN implements NN {
                 }
             }
         }
-
+        return result;
     }
 
     @Override
     public void backward(){
 
+    }
+
+    /**
+     * Run a full training iteration
+     */
+    @Override
+    public void runTrainingIteration(ArrayList x){
+
+    }
+
+    @Override
+    public void calculate_loss(float y_true, float y_predict){
 
     }
 
