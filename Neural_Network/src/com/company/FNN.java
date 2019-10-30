@@ -61,8 +61,27 @@ public class FNN implements NN {
     @Override
     public void forward(double[][] x){
 
+        for (int i = 0; i < weights.size() - 1; i++) {
+
+            x = matrixMultiplication(x, weights.get(i));
+            x = relu(x);
+        }
+
+        
+
 
     }
+
+    public double[][] relu(double[][] data){
+        for(int i=0; i < data.length; i++){
+            for(int j=0; j < data[0].length; j++){
+                if (data[i][j] < 0) {
+                    data[i][j] = 0;
+                }
+            }
+        }
+        return data;
+        }
 
 
     public double[][] matrixMultiplication(double[][] matrixA, double[][] matrixB){
@@ -76,7 +95,7 @@ public class FNN implements NN {
 
         for(int i=0; i < aRows; i++){
             for(int j=0; j < bCols; j++){
-                result[i][j] = 0
+                result[i][j] = 0;
                 for(int z=0; z < aCols; z++){
                     result[i][j] += matrixA[i][z] * matrixB[z][j];
                 }
